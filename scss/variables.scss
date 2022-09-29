@@ -1,0 +1,22 @@
+$colorFunte:#f4991a;
+$colorSecundario:#7b241c;
+$colortercero: #f8f8ff;
+
+@mixin carta {
+    font-family: 'Rubik Dirt', cursive;
+	margin-bottom: 1.6em;
+}
+@mixin estilo2 {
+    font-family: 'Titan One', cursive;
+}
+@mixin  estilohs {
+    background-image: url(../imagenes/historia.jpg);
+    height: 88vh;
+    color:$colortercero;
+    padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-size: cover;
+    
+}

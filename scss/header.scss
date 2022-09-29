@@ -1,0 +1,77 @@
+@keyframes Aparicion {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.historia {
+    @include estilohs;
+}
+
+.historia h1,
+.historia p,
+.historia {
+    animation: Aparicion 1500ms 1;
+}
+
+.historiao p {
+    max-width: 70ch;
+    animation-delay: 500ms;
+    animation-fill-mode: backwards;
+}
+
+.historia .button {
+    animation-delay: 1000ms;
+    animation-fill-mode: backwards;
+}
+
+nav {
+    padding: 0 40px;
+    background-color: $colorFunte;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+
+    ul {
+        li {
+            display: inline-block;
+            font-size: 1.125rem;
+            padding: 10px 20px;
+
+            &:hover {
+                background-color: $colorSecundario;
+                transition: 300ms;
+            }
+
+            &:active {
+                background-color: $colorSecundario;
+                transition: 150ms;
+            }
+
+            a {
+                color: black;
+
+                &:visited {
+                    color: black;
+                }
+            }
+        }
+
+        li.activo {
+            font-weight: bold;
+            background-color: $colorSecundario;
+            color: #7B241C;
+        }
+    }
+
+    .logo {
+        width: 9vw;
+    }
+}

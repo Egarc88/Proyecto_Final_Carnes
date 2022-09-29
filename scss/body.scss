@@ -1,0 +1,354 @@
+body {
+	font-family: "Quicksand", sans-serif;
+	background-image: url(../imagenes/fondo2.jpg);
+}
+
+h1 {@include carta;
+}
+
+h2 {
+	@include estilo2;
+	
+}
+
+h3 {
+	font-family: "Noto Serif", serif;
+}
+
+h4 {
+	font-family: "Noto Serif", serif;
+	
+}
+
+h5 {
+	font-family: "Noto Serif", serif;
+}
+
+h6 {
+	font-family: "Noto Serif", serif;
+}
+
+p {
+	margin-bottom: 1.6em;
+	font-family: 'Francois One', sans-serif;
+}
+
+input.button {
+	padding: 8px 18px;
+	border-radius: 4px;
+	display: inline-block;
+	max-width: max-content;
+	background-color: $colorFunte;
+	border: 1px solid black;
+	color: $colortercero;
+	font-weight: 600;
+
+	&:hover {
+		background-color: $colorSecundario;
+		transition: 300ms;
+		border-color: $colorSecundario;
+	}
+}
+
+.buttonSec {
+	padding: 8px 18px;
+	border-radius: 4px;
+	display: inline-block;
+	max-width: max-content;
+	background-color: transparent;
+	outline: none;
+	border: none;
+	color: $colorFunte;
+}
+
+.cards {
+	background-color: $colortercero;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	border-radius: 8px;
+	height: auto;
+	width: 400px;
+	margin: 24px;
+	padding-bottom: 32px;
+	box-shadow: 1px 1px 10px 2px black;
+
+	img {
+		width: 100%;
+		border-radius: 8px 8px 0 0;
+	}
+
+	p {
+		min-height: 100px;
+	}
+
+	&:hover {
+		transform: translateY(-3px);
+		transition: 400ms ease-in-out;
+	}
+}
+
+.cardBody {
+	padding: 30px;
+}
+
+form {
+	padding: 24px;
+	width: 40%;
+
+	>div {
+		margin: 16px 0;
+	}
+}
+
+.contactoForm {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding-top: 40px;
+
+	>div {
+		display: flex;
+		width: 75%;
+		justify-content: center;
+	}
+
+	h1 {
+		color: $colorFunte;
+		padding-top: 24px;
+	}
+}
+
+.textCenter {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.productos {
+	text-align: center;
+	padding-top: 2rem;
+	color: black;
+}
+
+.cardContainer {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+	column-gap: 16px;
+}
+
+
+@media (max-width: 1200px) {
+	.destacados {
+		display: grid;
+		grid-template-areas: "Titulo Titulo""card1 card2""card3 .";
+	}
+
+	.nosotros {
+		flex-wrap: wrap;
+	}
+}
+
+@media (max-width: 992px) {
+	.destacados {
+		display: grid;
+		justify-content: center;
+		grid-template-areas: "Titulo""card1""card2""card3";
+	}
+
+	.cardContainer {
+		justify-content: center;
+	}
+
+	.contactoForm {
+		>div {
+			flex-direction: column;
+		}
+	}
+
+	form {
+		width: 100%;
+	}
+}
+
+@media (max-width: 768px) {
+	section {
+		padding: 10px 20px;
+	}
+
+	.cardContainer {
+		grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+	}
+
+	.cards {
+		width: auto;
+		margin: 16px;
+	}
+
+	.historia {
+		padding: 20px;
+		height: 50vh;
+		background-position: 35% 20%;
+	}
+
+	.recetaArt {
+		flex-direction: column;
+	}
+
+	.nosotrosImg {
+		width: auto;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.contactoForm {
+		padding: 0;
+
+		>div {
+			width: 90%;
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.servicio .textCenter {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	.cardContainer {
+		grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+	}
+}
+
+// Formulario
+
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+form {
+	max-width: 300px;
+	margin: 10px auto;
+	padding: 10px 20px;
+	background: $colorFunte;
+	border-radius: 8px;
+}
+
+h1 {
+	margin: 0 0 30px 0;
+	text-align: center;
+	color: $colorFunte;
+}
+h2{
+	color: $colorFunte;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea,
+select {
+	background: rgba(255, 255, 255, 0.1);
+	border: none;
+	font-size: 16px;
+	height: auto;
+	margin: 0;
+	outline: 0;
+	padding: 15px;
+	width: 100%;
+	background-color: $colortercero;
+	color: #8a97a0;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+	margin-bottom: 30px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+	margin: 0 4px 8px 0;
+}
+
+select {
+	padding: 6px;
+	height: 32px;
+	border-radius: 2px;
+}
+
+button {
+	padding: 19px 39px 18px 39px;
+	color: $colortercero;
+	background-color: $colorSecundario;
+	font-size: 18px;
+	text-align: center;
+	font-style: normal;
+	border-radius: 5px;
+	width: 100%;
+	border: 1px solid#7B241C;
+	border-width: 1px 1px 3px;
+	box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+	margin-bottom: 10px;
+}
+
+fieldset {
+	margin-bottom: 30px;
+	border: none;
+}
+
+legend {
+	font-size: 1.4em;
+	margin-bottom: 10px;
+}
+
+label {
+	display: block;
+	margin-bottom: 8px;
+}
+
+label.light {
+	font-weight: 300;
+	display: inline;
+}
+
+.number {
+	background-color: $colorSecundario;
+	color:$colortercero;
+	height: 30px;
+	width: 30px;
+	display: inline-block;
+	font-size: 0.8em;
+	margin-right: 4px;
+	line-height: 30px;
+	text-align: center;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+	border-radius: 100%;
+}
+
+@media screen and (min-width: 480px) {
+	form {
+		max-width: 480px;
+	}
+	
+}
+// recetas
+
+.receta{
+	text-align: center;
+	padding-top: 2rem;
+	color: $colortercero;
+}
